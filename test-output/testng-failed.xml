@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.qa.extentReportListener.ExtentReportListener"/>
+    <listener class-name="com.carbonite.qa.RetryFailedTestLogic.TransformerForRetry"/>
+    <listener class-name="com.carbonite.qa.utils.CustomListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.carbonite.qa.tests.SignUpPageTest">
+        <methods>
+          <include name="fillSignUpFormWithValidTestData" invocation-numbers="0 0 0 0"/>
+          <include name="loggersetUp"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.carbonite.qa.tests.SignUpPageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
